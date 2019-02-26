@@ -44,11 +44,10 @@ function bookInfo(e) {
   let q = document.createElement('p')
   q.innerHTML = "<br><br> Users who liked this book:"
   getShowDiv().appendChild(q)
-
+debugger
   let ul = document.createElement('ul')
   JSON.parse(e.target.dataset.users).forEach(user=>{
-    let li = document.createElement('li')
-    li.innerText = user.username
+    let li = setLi(user)
     ul.appendChild(li)
   })
   getShowDiv().appendChild(ul)
@@ -61,16 +60,19 @@ function bookInfo(e) {
   getShowDiv().appendChild(button)
 }
 
+function setLi(user){
+  let li = document.createElement('li')
+  li.innerText = user.username
+  return li
+}
 function handleReadClick(e) {
   e.preventDefault()
   let bookId = e.target.dataset.id
   if (!e.target.dataset.users.includes(JSON.stringify(myId))) {
     newUserArray = JSON.parse(e.target.dataset.users)
     newUserArray.push(myId)
-    //e.target.dataset.users = JSON.stringify(newUserArray)
     let user = myId
-    let li = document.createElement('li')
-    li.innerText = user.username
+    let li = setLi(user)
     document.querySelectorAll("ul")[1].appendChild(li)
     patchBook(bookId, newUserArray)
   } else {
