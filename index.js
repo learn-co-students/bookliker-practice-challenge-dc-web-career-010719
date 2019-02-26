@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded", function() {});
+document.addEventListener("DOMContentLoaded", Controller.init)
