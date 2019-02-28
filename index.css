@@ -1,4 +1,99 @@
 body {
+	font-family: sans-serif;
 	display: grid;
 	grid-template-columns: 2fr 8fr
+}
+
+/* List */
+
+header {
+	font-size: 2em;
+	padding-left: 2em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	/* background-color: #FF6343; */
+}
+
+.book-button {
+	margin-top: 1vh;
+  width: 20vw;
+  font-size: .9em;
+  height: 5vh;
+  border-radius: 3em;
+	background-color: #DBDBD9;
+}
+
+.book-button:hover {
+	background-color: #C4C4C2;
+}
+
+.book-button:focus {
+	outline-color: white;
+}
+
+#list-panel {
+	margin-left: 1em;
+	border: 2px solid black;
+	border-radius: 3em;
+}
+
+ul {
+	padding-inline-end: 40px;
+}
+
+/* Show */
+
+/* #show-panel {
+	background-color: red;
+} */
+
+.display-card {
+	margin: 60px 3em 1em 3em;
+	padding: 3em;
+	background-color: #DBDBD9;
+	border-radius: 3em;
+  overflow: auto;
+}
+
+.display-card h2 {
+	margin-top: 0em;
+	text-align: center;
+}
+
+.display-card span {
+	overflow: auto;
+}
+
+.display-card img {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.user-span {
+	padding: .5em;
+	margin: .5em;
+}
+
+.users-span {
+	clear: left;
+	margin: .5em 0em;
+	padding: .5em;
+	line-height: 150%;
+	background-color: white;
+	border-radius: 1em;
+}
+
+.display-card button {
+	padding: .5em;
+	background-color: white;
+	border-radius: 1em;
+	outline-color: #DBDBD9;
+	border: none;
+	font-size: 1em;
+	color: black;
+}
+
+.display-card button:hover {
+	background-color: #C4C4C2;
 }
